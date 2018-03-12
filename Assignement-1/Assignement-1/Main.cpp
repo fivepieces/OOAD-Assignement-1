@@ -1,6 +1,9 @@
 #include <iostream>
 #include "Character.h"
 #include "Weapon.h"
+#include "Bow.h"
+#include "Sword.h"
+#include "Daggers.h"
 
 int main()
 {
@@ -12,14 +15,11 @@ int main()
 
 	// Init Player character and give it starting stats & weapon
 	std::string pName = "Keith";
-	std::string wName = "Sword ";
-	std::string wName2 = "Bow ";
-	std::string wName3 = "Daggers ";
 
-	// Pointer to the hardcoded weapons [ Name, Type
-	Weapon *W_One = new Weapon(wName, "Sword", 0);
-	Weapon *W_Two = new Weapon(wName2, "Bow", 0);
-	Weapon *W_Three = new Weapon(wName3, "Daggers", 0);
+	// Pointer to the hardcoded weapons [ Name, Type ]
+	Weapon *W_One = new Bow();
+	Weapon *W_Two = new Sword();
+	Weapon *W_Three = new Daggers();
 
 	// SPACER
 	std::cout << "" << std::endl;
@@ -31,22 +31,22 @@ int main()
 	std::cout << "" << std::endl;
 
 	// Equip & Attack [ W1, Main Hand ]
-	P->EquipMain(W_One);
-	P->MainAttack(W_One);
+	P->Equip(W_One);
+	P->Attack(W_One);
 
 	// SPACER
 	std::cout << "" << std::endl;
 
 	// Equip & Attack [ W2, Off Hand ]
-	P->EquipMain(W_Two);
-	P->MainAttack(W_Two);
+	P->Equip(W_Two);
+	P->Attack(W_Two);
 
 	// SPACER
 	std::cout << "" << std::endl;
 
 	// Equip & Attack [ W3, Off Hand ]
-	P->EquipSecondary(W_Three);
-	P->SecondaryAttack(W_Three);
+	P->Equip(W_Three);
+	P->Attack(W_Three);
 
 	// SPACER
 	std::cout << "" << std::endl;

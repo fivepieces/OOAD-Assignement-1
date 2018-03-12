@@ -19,12 +19,18 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Bow.h" />
     <ClInclude Include="Character.h" />
+    <ClInclude Include="Daggers.h" />
+    <ClInclude Include="Sword.h" />
     <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Bow.cpp" />
     <ClCompile Include="Character.cpp" />
+    <ClCompile Include="Daggers.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Sword.cpp" />
     <ClCompile Include="Weapon.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

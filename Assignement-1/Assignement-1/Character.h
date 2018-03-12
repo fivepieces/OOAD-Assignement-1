@@ -12,13 +12,9 @@ public:
 	//Variables
 	std::string name;
 	float HP;
-	Weapon *mainHand;
-	Weapon *offHand;
 
 	//functions
-	void MainAttack(Weapon *_W);
-	void SecondaryAttack(Weapon *_W);
-	void EquipMain(Weapon *_W);
-	void EquipSecondary(Weapon *_W);
+	void Attack(Weapon *_W);
+	void Equip(Weapon *_W);
 };
 
